@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from datetime import datetime
 import os
 import pytz
-from keep_alive import keep_alive
+from myserver import server_on
 
 # โหลดตัวแปรสิ่งแวดล้อมจาก .env
 load_dotenv()
