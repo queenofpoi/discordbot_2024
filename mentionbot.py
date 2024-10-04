@@ -63,7 +63,7 @@ async def update_boss_info():
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}')
-    keep_alive()  # เรียกใช้ฟังก์ชันเพื่อให้บอททำงานตลอดเวลา
+    server_on()  # เรียกใช้ฟังก์ชันเพื่อให้บอททำงานตลอดเวลา
     bot.loop.create_task(update_boss_info())  # เรียกใช้ฟังก์ชัน update_boss_info
 
 async def clear_cache():
@@ -86,6 +86,5 @@ token = os.getenv('DISCORD_BOT_TOKEN')
 if token is None:
     raise ValueError("Token ไม่ได้ถูกตั้งค่าในตัวแปรสิ่งแวดล้อม")
 
-server_on()
 
 bot.run(token)
