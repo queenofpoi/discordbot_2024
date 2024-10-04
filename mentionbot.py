@@ -9,9 +9,6 @@ import os
 import pytz
 from myserver import server_on
 
-# โหลดตัวแปรสิ่งแวดล้อมจาก .env
-load_dotenv()
-
 # กำหนด intents
 intents = discord.Intents.all()
 
